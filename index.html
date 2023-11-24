@@ -1,21 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giovanni Pereira</title>
     <link rel="stylesheet" href="./style/dark.css">
 </head>
+
 <body>
+    <nav class="hover">
+        <menu>
+            <li>
+                <a href="#">
+                    <span class="icon" id="logo">
+                        <ion-icon name="logo-google"></ion-icon>
+                    </span>
+                    <span class="title">Meu Portifólio</span>
+                </a>
+            </li>
+        </menu>
+        <menu>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="title">Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="#about-me">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="title">Sobre mim</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="bar-chart-outline"></ion-icon>
+                    </span>
+                    <span class="title">Experiência</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="trophy-outline"></ion-icon>
+                    </span>
+                    <span class="title">Certificados</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="folder-open-outline"></ion-icon>
+                    </span>
+                    <span class="title">Projetos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="link-outline"></ion-icon>
+                    </span>
+                    <span class="title">Contatos</span>
+                </a>
+            </li>
+        </menu>
+        <menu id="theme">
+            <li>
+                <a href="#">
+                    <span class="icon" id="moon">
+                        <input type="radio" name="theme" id="dark-theme" class="switch-theme" value="dark">
+                        <label id="dark-theme" for="dark-theme"><ion-icon name="moon-outline"></ion-icon></label>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon" id="sun">
+                        <input type="radio" name="theme" id="light-theme" class="switch-theme" value="light">
+                        <label id="light-theme" for="light-theme"><ion-icon name="sunny-outline"></ion-icon></label>
+                    </span>
+                </a>
+            </li>
+        </menu>
+    </nav>
+    <main>
+        <div id="home" class="content">
+            <h2>Prazer! Meu nome é</h2>
+            <h1>Giovanni Pereira Tavares</h1>
+            <h3>Desenvolvedor Web</h3>
+            <p>
+                Estudante de <strong>Ciência da Computação</strong> na <strong>Unip</strong>, atualmente focado em
+                <strong>Desenvolvimento Web</strong> e <strong>Web Designer</strong>.
+            </p>
+        </div>
     
-    <input type="radio" name="theme" id="theme-dark" class="theme-switch" value="dark">
-    <label for="theme-dark">Dark</label>
+        <div id="about-me">
+            <p>
+                Olá, meu nome é <span>Giovanni Pereira</span> sou desenvolvedor desde 2019. Meu primeiro contato
+                com a programação foi através do desenvolvimento de <a href="https://discord.js.org/#/" target="_blank"
+                    rel="nofollow">Bots no Discord</a>. Esse primeiro contato me encantou e me fez querer aprender
+                <strong>JavaScript</strong>, depois disso foi implementando cada vez mais tecnologias em minha
+                aplicações assim entregando as melhores soluções para meus clientes, implementando primeiramente
+                um banco de dados local e depois migrando para um online.
+            </p>
+            <p>
+                Atualmente estou focado em Desenvolvimento Web, atuando como programador e designer,
+                alinhando assim os das duas áreas conseguindo entregar o melhor projeto possível, com
+                <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, e grandes 
+                diferenciais como <strong>responsividade</strong>, <strong>UX e UI designing</strong>.
+            </p>
+        </div>
+    </main>
+    
 
-    <input type="radio" name="theme" id="theme-light" class="theme-switch" value="light">
-    <label for="theme-light">Light</label>
-
-    <h1>Hello World</h1>
-        
     <script src="./script/animation.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
