@@ -84,3 +84,7 @@ function typeWriter(element) {
 
 const text = document.querySelector('h3');
 typeWriter(text);
+
+document.addEventListener("scroll", (event) => {
+    console.log(event)
+});

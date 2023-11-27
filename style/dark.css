@@ -73,6 +73,11 @@ nav menu li a {
     display: flex;
     white-space: nowrap;
     text-decoration: none;
+    color: var(--text-color);
+}
+
+nav menu li a:hover {
+    color: var(--highlight-color);
 }
 
 nav menu li a .icon {
@@ -82,19 +87,14 @@ nav menu li a .icon {
     font-size: 1.5rem;
     min-width: 60px;
     height: 60px;
-    color: var(--text-color);
 }
 
-nav menu li a .title:hover {
-    color: var(--highlight-color);
-}
 
 nav menu li a .title {
     display: flex;
     align-items: center;
     width: 100%;
     height: 60px;
-    color: var(--text-color);
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
