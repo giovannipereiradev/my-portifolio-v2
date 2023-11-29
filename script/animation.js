@@ -85,6 +85,21 @@ function typeWriter(element) {
 const text = document.querySelector('h3');
 typeWriter(text);
 
-document.addEventListener("scroll", (event) => {
-    console.log(event)
+//SCROLL ANIMATION
+const dataScroll = document.querySelectorAll('[data-scroll-animation]');
+const animationClass = 'animate';
+
+function scrollAnimation() {
+    const windowTop = window.scrollY + ((window.innerHeight * 3) / 4);
+    dataScroll.forEach(function(element){
+        if ((windowTop) > element.offsetTop) {
+            element.classList.add(animationClass);
+        } else {
+            element.classList.remove(animationClass);
+        };
+    });
+};
+
+window.addEventListener('scroll', function() {
+    scrollAnimation()
 });
