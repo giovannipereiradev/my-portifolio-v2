@@ -2,6 +2,22 @@ const body = document.querySelector("body");
 const nav = document.querySelector('nav');
 const main = document.querySelector('main');
 
+//FUNCTION DEBOUNCE LODASH
+const debounce = function (func, wait, immediate) {
+    let timeout;
+    return function (...args) {
+        const context = this;
+        const later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
 //BLUR SIDE BAR
 nav.addEventListener('mouseenter', () => {
     main.style.filter = 'blur(5px)';
@@ -27,14 +43,14 @@ lightTextColor = '#141414';
 const themeSwitch = document.querySelectorAll('.switch-theme');
 const initialTheme = 'dark-theme';
 body.classList.add(initialTheme);
-document.querySelector(`#${initialTheme}`).checked =  true;
+document.querySelector(`#${initialTheme}`).checked = true;
 document.querySelector(`label#${initialTheme}`).style.color = darkHighlightColor;
 
-function toggleTheme(event){
+function toggleTheme(event) {
     const theme = this.value;
     body.classList.remove("light-theme", "dark-theme");
     body.classList.add(`${theme}-theme`);
-    
+
     const dark = document.querySelector(`label#dark-theme`);
     const light = document.querySelector(`label#light-theme`);
     if (theme == 'dark') {
@@ -46,7 +62,7 @@ function toggleTheme(event){
     };
 }
 
-Array.from(themeSwitch).forEach( radio => radio.addEventListener('change', toggleTheme));
+Array.from(themeSwitch).forEach(radio => radio.addEventListener('change', toggleTheme));
 
 //TYPE WRITER
 function typeWriter(element) {
@@ -67,20 +83,20 @@ function typeWriter(element) {
         } else {
             element.innerHTML = currentText.substring(0, charIndex + 1);
             charIndex++;
-        }
+        };
         if (!isDeleting && charIndex === currentText.length + 1) {
             isDeleting = true;
-            setTimeout(() => type(), 2000); 
+            setTimeout(() => type(), 2000);
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-            type(); 
+            type();
         } else {
             setTimeout(() => type(), 100);
-        }
-    }
+        };
+    };
     type();
-}
+};
 
 const text = document.querySelector('h3');
 typeWriter(text);
@@ -89,17 +105,41 @@ typeWriter(text);
 const dataScroll = document.querySelectorAll('[data-scroll-animation]');
 const animationClass = 'animate';
 
+
+const navButtons = {
+    home: document.querySelector('#icon-home'),
+    about: document.querySelector('#icon-about-me'),
+    experience: document.querySelector('#icon-experience')
+};
+
 function scrollAnimation() {
     const windowTop = window.scrollY + ((window.innerHeight * 3) / 4);
-    dataScroll.forEach(function(element){
+    dataScroll.forEach(function (element) {
         if ((windowTop) > element.offsetTop) {
             element.classList.add(animationClass);
         } else {
             element.classList.remove(animationClass);
         };
+
+        if (windowTop < 1116 ) {
+            document.querySelector('.active').classList.remove('active');
+            navButtons["home"].classList.add('active');
+        } else if (windowTop > 1116  && windowTop < 1939) {
+            document.querySelector('.active').classList.remove('active');
+            navButtons["about"].classList.add('active');
+        } else if (windowTop > 1940) {
+            document.querySelector('.active').classList.remove('active');
+            navButtons["experience"].classList.add('active');
+        }    
     });
 };
 
-window.addEventListener('scroll', function() {
-    scrollAnimation()
-});
+scrollAnimation();
+
+if (dataScroll.length) {
+    window.addEventListener('scroll', debounce(
+        function () {
+            scrollAnimation()
+        }
+    ), 200);
+};

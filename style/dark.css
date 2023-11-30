@@ -76,7 +76,11 @@ nav menu li a {
     color: var(--text-color);
 }
 
-nav menu li a:hover {
+nav menu li a .title:hover {
+    color: var(--highlight-color);
+}
+
+.active {
     color: var(--highlight-color);
 }
 
@@ -355,6 +359,10 @@ nav menu#theme li a input {
 [data-scroll-animation] {
     opacity: 0;
     transition: 0.3s;   
+}
+
+[data-scroll-animation='top'] {
+    transform: translate3d(0px, -100px, 0px);
 }
 
 [data-scroll-animation='left'] {
