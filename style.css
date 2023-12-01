@@ -126,7 +126,7 @@ nav input {
 }
 
 #home {
-    height: 80dvh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,6 +185,7 @@ nav input {
     justify-content: space-around;
     align-items: center;
     height: 100dvh;
+    overflow: hidden;
 }
 
 #about-me article {
@@ -258,6 +259,7 @@ nav input {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    overflow: hidden;
 }
 
 .skill-card {

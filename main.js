@@ -143,3 +143,33 @@ if (dataScroll.length) {
         }
     ), 200);
 };
+
+//SET lANGUAGE
+function getLanguage() {
+    let language = navigator.language || navigator.userLanguage;
+
+    if (language == 'pt-BR' || language == 'pt-PT' || language == 'pt') {
+        language = 'pt';
+    } else {
+        language = 'en';
+    };
+    return language;
+};
+
+async function getJson(language) {
+    const response = await fetch(`./languages/${language}.json`);
+    return response.json();
+};
+
+async function changeLanguage(language) { 
+    let json = await getJson(language);
+    document.querySelectorAll('[data-language]').forEach(function (element) {
+        var key = element.dataset.language;
+        if (json[key]) {
+            element.innerHTML = json[key];
+        };
+    });
+};
+
+let language = getLanguage();
+changeLanguage(language)

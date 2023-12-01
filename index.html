@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giovanni Pereira</title>
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./style/dark.css">
+  <link rel="stylesheet" href="./style.css">
 
 </head>
 
@@ -18,7 +18,7 @@
           <span class="icon" id="logo">
             <ion-icon name="logo-google"></ion-icon>
           </span>
-          <span class="title">Meu Portifólio</span>
+          <span class="title" data-language="title">Meu Portifólio</span>
         </a>
       </li>
     </menu>
@@ -28,7 +28,7 @@
           <span class="icon active" id="icon-home">
             <ion-icon name="home-outline"></ion-icon>
           </span>
-          <span class="title">Início</span>
+          <span class="title" data-language="home">Início</span>
         </a>
       </li>
       <li>
@@ -36,7 +36,7 @@
           <span class="icon" id="icon-about-me">
             <ion-icon name="person-outline"></ion-icon>
           </span>
-          <span class="title">Sobre mim</span>
+          <span class="title" data-language="about-me">Sobre mim</span>
         </a>
       </li>
       <li>
@@ -44,7 +44,7 @@
           <span class="icon" id="icon-experience">
             <ion-icon name="bar-chart-outline"></ion-icon>
           </span>
-          <span class="title">Experiência</span>
+          <span class="title" data-language="experience">Experiência</span>
         </a>
       </li>
       <li>
@@ -52,7 +52,7 @@
           <span class="icon" id="icon-certificates">
             <ion-icon name="trophy-outline"></ion-icon>
           </span>
-          <span class="title">Certificados</span>
+          <span class="title" data-language="certificates">Certificados</span>
         </a>
       </li>
       <li>
@@ -60,7 +60,7 @@
           <span class="icon" id="icon-projects">
             <ion-icon name="folder-open-outline"></ion-icon>
           </span>
-          <span class="title">Projetos</span>
+          <span class="title" data-language="projects">Projetos</span>
         </a>
       </li>
       <li>
@@ -68,7 +68,7 @@
           <span class="icon" id="icon-contacts">
             <ion-icon name="link-outline"></ion-icon>
           </span>
-          <span class="title">Contatos</span>
+          <span class="title" data-language="contacts">Contatos</span>
         </a>
       </li>
     </menu>
@@ -99,17 +99,17 @@
   </nav>
   <main>
     <div id="home" class="content">
-      <h2>Prazer! Meu nome é</h2>
+      <h2 data-language="hello">Prazer! Meu nome é</h2>
       <h1>Giovanni Pereira Tavares</h1>
       <h3>Desenvolvedor Web</h3>
-      <p>
+      <p data-language="introduction">
         Estudante de <strong>Ciência da Computação</strong> na <strong>Unip</strong>, atualmente focado em
         <strong>Desenvolvimento Web</strong> e <strong>Web Designer</strong>.
       </p>
     </div>
     <div id="about-me">
       <article data-scroll-animation="left">
-        <p>
+        <p data-language="first-text-about">
           Olá, meu nome é <span>Giovanni Pereira</span> sou desenvolvedor desde 2019. Meu primeiro contato
           com a programação foi através do desenvolvimento de <strong><a href="https://discord.js.org/#/"
               target="_blank" rel="nofollow">Bots no Discord</a></strong>. Esse primeiro contato me encantou e me fez
@@ -118,7 +118,7 @@
           aplicações assim entregando as melhores soluções para meus clientes, implementando primeiramente
           um banco de dados local e depois migrando para um online.
         </p>
-        <p>
+        <p data-language="second-text-about">
           Atualmente estou focado em Desenvolvimento Web, atuando como programador e designer,
           alinhando assim os das duas áreas conseguindo entregar o melhor projeto possível, com
           <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, e grandes
@@ -133,7 +133,7 @@
     </div>
     <div id="experience">
       <div class="skill-card" data-scroll-animation="left">
-        <h2>Tecnologias</h2>
+        <h2 data-language="technologies">Tecnologias</h2>
         <div class="skill-box">
           <span class="title">HTML</span>
           <div class="skill-bar">
@@ -174,7 +174,7 @@
         </div>
       </div>
       <div class="skill-card" data-scroll-animation="top">
-        <h2>Ferramentas</h2>
+        <h2 data-language="tools">Ferramentas</h2>
         <div class="skill-box">
           <span class="title">MySQL</span>
           <div class="skill-bar">
@@ -214,7 +214,7 @@
       <div class="skill-card" data-scroll-animation="right">
         <h2>Hard Skills</h2>
         <div class="skill-box">
-          <span class="title">Responsividade</span>
+          <span class="title" data-language="responsiveness">Responsividade</span>
           <div class="skill-bar">
             <span class="skill-per Responsividade">
               <span class="tooltip">90%</span>
@@ -223,7 +223,7 @@
         </div>
 
         <div class="skill-box">
-          <span class="title">Semântica</span>
+          <span class="title" data-language="semantics">Semântica</span>
 
           <div class="skill-bar">
             <span class="skill-per Semântica">
@@ -233,7 +233,7 @@
         </div>
 
         <div class="skill-box">
-          <span class="title">Animação</span>
+          <span class="title" data-language="animation">Animação</span>
 
           <div class="skill-bar">
             <span class="skill-per Animacao">
@@ -256,7 +256,7 @@
   </main>
 
 
-  <script src="./script/animation.js"></script>
+  <script src="./main.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

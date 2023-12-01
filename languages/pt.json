@@ -1,0 +1,22 @@
+{
+    "title":"Meu Portifólio",
+
+    "home": "Início",
+    "aboute-me": "Sobre mim",
+    "experiences": "Experiências",
+    "certificates": "Certificados",
+    "projects": "Projetos",
+    "contacts": "Contatos",
+    
+    "hello": "Prazer! Meu nome é",
+    "introduction": "Estudante de <strong>Ciência da Computação</strong> na <strong>Unip</strong>, atualmente focado em <strong>Desenvolvimento Web</strong> e <strong>Web Designer</strong>.",
+
+    "first-text-about": "Olá, meu nome é <span>Giovanni Pereira</span> sou desenvolvedor desde 2019. Meu primeiro contato com a programação foi através do desenvolvimento de <strong><a href=\"https://discord.js.org/#/\" target=\"_blank\" rel=\"nofollow\">Bots no Discord</a></strong>. Esse primeiro contato me encantou e me fez querer aprender <strong>JavaScript</strong>, depois disso foi implementando cada vez mais tecnologias em minha aplicações assim entregando as melhores soluções para meus clientes, implementando primeiramente um banco de dados local e depois migrando para um online.",
+    "second-text-about": "Atualmente estou focado em Desenvolvimento Web, atuando como programador e designer, alinhando assim os das duas áreas conseguindo entregar o melhor projeto possível, com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, e grandes diferenciais como <strong>responsividade</strong>, <strong>UX e UI designing</strong>.",
+
+    "technologies":"Tecnologias",
+    "tools": "Ferramentas",
+    "responsiveness": "Responsividade",
+    "semantics":"Semântica", 
+    "animation":"Animação"
+}
