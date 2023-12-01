@@ -15,20 +15,25 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .dark-theme {
     --primary-color: #141414;
     --secondary-color: #1E1E1E;
     --text-color: #d3dbf5;
     --secondary-text-color: #8892B0;
     --highlight-color: #FFA62B;
+    --primary-shadow: #070707;
+    --secondary-shadow: #272727;
 }
 
 .light-theme {
-    --primary-color: #FFFFFF;
-    --secondary-color: #cacaca;
-    --text-color: #141414;
-    --secondary-text-color: #1E1E1E;
-    --highlight-color: #FFA62B;
+    --primary-color: #E8E8E8;
+    --secondary-color: #dddddd;
+    --text-color: #161925;
+    --secondary-text-color: #1e2025;
+    --highlight-color: #ff9d14;
+    --primary-shadow: #c5c5c5;
+    --secondary-shadow: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -254,7 +259,7 @@ nav menu#theme li a input {
     margin: 0 15px;
     padding: 10px 20px;
     border-radius: 30px;
-    box-shadow: 15px 15px 30px rgb(7, 7, 7), -15px -15px 30px rgb(39, 39, 39);
+    box-shadow: 20px 20px 60px var(--primary-shadow), -20px -20px 60px var(--secondary-shadow);
 }
 
 .container h2 {
@@ -352,7 +357,7 @@ nav menu#theme li a input {
     height: 10px;
     width: 10px;
     z-index: -1;
-    background-color: rgb(226, 226, 226);
+    background-color:var(--text-color);
     transform: translateX(-50%) rotate(45deg);
 }
 
