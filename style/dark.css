@@ -74,32 +74,14 @@ nav {
     width: 250px;
 }
 
-nav menu li a {
+nav a {
     display: flex;
     white-space: nowrap;
     text-decoration: none;
     color: var(--text-color);
 }
 
-nav menu li a .title:hover {
-    color: var(--highlight-color);
-}
-
-.active {
-    color: var(--highlight-color);
-}
-
-nav menu li a .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    min-width: 60px;
-    height: 60px;
-}
-
-
-nav menu li a .title {
+nav .title {
     display: flex;
     align-items: center;
     width: 100%;
@@ -109,7 +91,32 @@ nav menu li a .title {
     letter-spacing: 0.05rem;
 }
 
-nav menu#theme li a input {
+nav .title:hover {
+    color: var(--highlight-color);
+}
+
+.active {
+    color: var(--highlight-color);
+}
+
+nav .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    min-width: 60px;
+    height: 60px;
+}
+
+.icon label {
+    cursor: pointer;
+}
+
+nav span#moon {
+    height: 30px;
+}
+
+nav input {
     display: none;
 }
 
@@ -253,21 +260,22 @@ nav menu#theme li a input {
     justify-content: space-around;
 }
 
-.container {
+.skill-card {
     position: relative;
     background: var(--secondary-color);
     margin: 0 15px;
     padding: 10px 20px;
     border-radius: 30px;
     box-shadow: 20px 20px 60px var(--primary-shadow), -20px -20px 60px var(--secondary-shadow);
+    overflow: hidden;
 }
 
-.container h2 {
+.skill-card h2 {
     color: var(--highlight-color);
     font-size: 1.2rem;
 }
 
-.container .skill-box {
+.skill-card .skill-box {
     width: 24vw;
     margin: 25px 0;
 }
