@@ -120,6 +120,14 @@ nav input {
     display: none;
 }
 
+nav #change-language {
+    transition: transform 0.5s ease;
+}
+
+#rotate {
+    transform: rotate(360deg);
+}
+
 #logo {
     font-size: 2rem;
     color: var(--highlight-color);

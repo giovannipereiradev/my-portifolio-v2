@@ -1,3 +1,13 @@
 {
+    "title":"My portfolio",
+
+    "home": "Home",
+    "about-me": "About me",
+    "experiences": "Experiences",
+    "certificates": "Certificates",
+    "projects": "Projects",
+    "contacts": "Contacts",
     
+    "hello": "Hello! My name is",
+    "introduction": "Student of <strong>Computer Science</strong> in <strong>Unip</strong>, now my focus is <strong>Web Development</strong> and <strong>Web Designer</strong>."
 }
