@@ -1,9 +1,11 @@
+import { getLanguage } from "./changeLanguage.js";
+
 export default function TypeWriter() {
     const text = document.querySelector('h3');
-    typeWriter(text);
+    writer(text);
 }
 
-function typeWriter(element) {
+function writer(element) {
     const pt = [
         "Desenvolvedor Web",
         "Designing UX e UI"
@@ -15,7 +17,7 @@ function typeWriter(element) {
     ];
 
     let phrases;
-
+    
     if ( getLanguage() === 'pt') {
         phrases = pt;
     } else {
@@ -48,15 +50,4 @@ function typeWriter(element) {
         };
     };
     type();
-};
-
-function getLanguage() {
-    let language = navigator.language || navigator.userLanguage;
-
-    if (language == 'pt-BR' || language == 'pt-PT' || language == 'pt') {
-        language = 'pt';
-    } else {
-        language = 'en';
-    };
-    return language;
 };

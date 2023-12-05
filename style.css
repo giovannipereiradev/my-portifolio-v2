@@ -120,12 +120,9 @@ nav input {
     display: none;
 }
 
-nav #change-language {
+.rotate {
     transition: transform 0.5s ease;
-}
-
-#rotate {
-    transform: rotate(360deg);
+    transform: rotate(359deg);
 }
 
 #logo {

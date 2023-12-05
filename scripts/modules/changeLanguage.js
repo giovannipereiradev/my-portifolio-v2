@@ -1,20 +1,28 @@
 export default function ChangeLanguage() {
+
     let language = getLanguage();
 
-    changeLanguage(language);
+    changeHTML(language);
 
     const checkBox = document.getElementById('change-language')
+    const iconAnamation = document.getElementById('change-language-label');
 
-    checkBox.addEventListener('change', function() {
+    checkBox.addEventListener('change', function () {
+        iconAnamation.classList.add('rotate');
+        setTimeout(function () {
+            iconAnamation.classList.remove('rotate');
+        }, 500);
+
         if (checkBox.checked) {
-            changeLanguage('pt');
+            changeHTML('pt');
         } else {
-            changeLanguage('en');
-        }
+            changeHTML('en');
+        };
     });
-}
 
-function getLanguage() {
+};
+
+export function getLanguage() {
     let language = navigator.language || navigator.userLanguage;
     const checkBox = document.getElementById('change-language')
 
@@ -33,7 +41,7 @@ async function getJson(language) {
     return response.json();
 };
 
-async function changeLanguage(language) { 
+async function changeHTML(language) {
     let json = await getJson(language);
     document.querySelectorAll('[data-language]').forEach(function (element) {
         var key = element.dataset.language;
