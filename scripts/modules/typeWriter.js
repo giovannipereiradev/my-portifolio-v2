@@ -1,11 +1,11 @@
 import { getLanguage } from "./changeLanguage.js";
 
-export default function TypeWriter() {
+export default function TypeWriter(language) { 
     const text = document.querySelector('h3');
-    writer(text);
-}
+    selectPhrases(text, language);
+};
 
-function writer(element) {
+function selectPhrases(element, language) {
     const pt = [
         "Desenvolvedor Web",
         "Designing UX e UI"
@@ -17,37 +17,36 @@ function writer(element) {
     ];
 
     let phrases;
+
+    if (!language) language = getLanguage();
+
+    if (language == 'pt') phrases = pt; else phrases = en;
+
+    function type() {
+        for (let x of phrases) {
+            
+
+            for (let y = 0; y <= x.length; y++) {
+                setTimeout(() => {
+                    element.innerHTML = x.substring(0, y);
+                }, 100 * y);
+            };
     
-    if ( getLanguage() === 'pt') {
-        phrases = pt;
-    } else {
-        phrases = en
-    }
-
-    let currentPhraseIndex = 0;
-    let isDeleting = false;
-    let charIndex = 0;
-
-    function type() { 
-
-        const currentText = phrases[currentPhraseIndex];
-        if (isDeleting) {
-            element.innerHTML = currentText.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            element.innerHTML = currentText.substring(0, charIndex + 1);
-            charIndex++;
-        };
-        if (!isDeleting && charIndex === currentText.length + 1) {
-            isDeleting = true;
-            setTimeout(() => type(), 2000);
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-            type();
-        } else {
-            setTimeout(() => type(), 100);
+            setTimeout(() => {
+                for (let z =x.length; z >= 0; z--) {
+                    setTimeout(() => {
+                        element.innerHTML =x.substring(0, z);
+                    }, 100 * (x.length - z));
+                };
+            }, (100 * x.length ) + 3000);
+            
+            setTimeout(() => {
+                type()
+            }, 10 * 1000);
         };
     };
+
     type();
+
 };
+
