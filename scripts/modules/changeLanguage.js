@@ -17,10 +17,10 @@ export default function ChangeLanguage() {
 
         if (checkBox.checked) {
             changeHTML('pt');
-            TypeWriter('pt');
+            //TypeWriter('pt');
         } else {
             changeHTML('en');
-            TypeWriter('en');
+            //TypeWriter('en');
         };
     });
 

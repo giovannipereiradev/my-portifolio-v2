@@ -116,6 +116,10 @@ nav footer .icon {
     cursor: pointer;
 }
 
+.icon label:hover {
+    color: var(--highlight-color);
+}
+
 nav span#moon {
     height: 30px;
 }
@@ -264,7 +268,7 @@ nav input {
 }
 
 #experience {
-    height: 80dvh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: space-around;

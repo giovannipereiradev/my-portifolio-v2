@@ -4,9 +4,9 @@ BlurSideBar();
 
 
 
-import ChangeTheme from './modules/changeTheme.js';
+import InitialTheme from './modules/initialTheme.js';
 
-ChangeTheme();
+InitialTheme();
 
 
 

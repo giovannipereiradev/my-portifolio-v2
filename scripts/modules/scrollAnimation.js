@@ -27,6 +27,7 @@ export default function ScrollAnimation () {
     
     function scrollAnimation() {
         const windowTop = window.scrollY + ((window.innerHeight * 3) / 4);
+        
         dataScroll.forEach(function (element) {
             if ((windowTop) > element.offsetTop) {
                 element.classList.add(animationClass);
@@ -37,10 +38,10 @@ export default function ScrollAnimation () {
             if (windowTop < 1116 ) {
                 document.querySelector('.active').classList.remove('active');
                 navButtons["home"].classList.add('active');
-            } else if (windowTop > 1116  && windowTop < 1939) {
+            } else if (windowTop > 1116  && windowTop < 2213) {
                 document.querySelector('.active').classList.remove('active');
                 navButtons["about"].classList.add('active');
-            } else if (windowTop > 1940) {
+            } else if (windowTop > 2214) {
                 document.querySelector('.active').classList.remove('active');
                 navButtons["experience"].classList.add('active');
             }    
