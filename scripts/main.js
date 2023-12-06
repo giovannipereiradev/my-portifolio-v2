@@ -19,9 +19,3 @@ ChangeLanguage();
 import ScrollAnimation from './modules/scrollAnimation.js';
 
 ScrollAnimation();
-
-
-
-import TypeWriter from './modules/typeWriter.js';
-
-TypeWriter();

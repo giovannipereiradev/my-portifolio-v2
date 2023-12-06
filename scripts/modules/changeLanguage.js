@@ -1,3 +1,5 @@
+import TypeWriter from "./typeWriter.js";
+
 export default function ChangeLanguage() {
 
     let language = getLanguage();
@@ -15,11 +17,14 @@ export default function ChangeLanguage() {
 
         if (checkBox.checked) {
             changeHTML('pt');
+            TypeWriter('pt');
         } else {
             changeHTML('en');
+            TypeWriter('en');
         };
     });
 
+    
 };
 
 export function getLanguage() {

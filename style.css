@@ -108,6 +108,10 @@ nav .icon {
     height: 60px;
 }
 
+nav footer .icon {
+    width: 60px;
+}
+
 .icon label {
     cursor: pointer;
 }

@@ -1,3 +1,8 @@
+/**
+ * This method make the body stay blur while the user hover the sidebar.
+ * @method
+ */
+
 export default function BlurSideBar() {
     const body = document.querySelector("body");
     const nav = document.querySelector('nav');
