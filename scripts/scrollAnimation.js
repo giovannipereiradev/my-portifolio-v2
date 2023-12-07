@@ -27,7 +27,10 @@ export default function ScrollAnimation () {
     const navButtons = {
         home: document.querySelector('#icon-home'),
         about: document.querySelector('#icon-about-me'),
-        experience: document.querySelector('#icon-experience')
+        experience: document.querySelector('#icon-experience'),
+        certificates: document.querySelector('#icon-certificates'),
+        projects: document.querySelector('#icon-projects'),
+        contacts: document.querySelector('#icon-contacts'),
     };
 
     /**
@@ -51,9 +54,12 @@ export default function ScrollAnimation () {
             } else if (windowTop > 1116  && windowTop < 2213) {
                 document.querySelector('.active').classList.remove('active');
                 navButtons["about"].classList.add('active');
-            } else if (windowTop > 2214) {
+            } else if (windowTop > 2214  && windowTop < 2995) {
                 document.querySelector('.active').classList.remove('active');
                 navButtons["experience"].classList.add('active');
+            } else if (windowTop > 2996) {
+                document.querySelector('.active').classList.remove('active');
+                navButtons["certificates"].classList.add('active');
             };
         });
     };
@@ -62,7 +68,6 @@ export default function ScrollAnimation () {
     
     if (dataScroll.length) {
         window.addEventListener('scroll', debounce( function () {
-            console.log(window.scrollY + ((window.innerHeight * 3) / 4));
             scrollAnimation();
         }), 200);
     };    

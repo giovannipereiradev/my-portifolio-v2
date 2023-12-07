@@ -81,6 +81,7 @@ nav a {
     color: var(--text-color);
 }
 
+
 nav .title {
     display: flex;
     align-items: center;
@@ -118,10 +119,6 @@ nav footer .icon {
 
 .icon label:hover {
     color: var(--highlight-color);
-}
-
-nav span#moon {
-    height: 30px;
 }
 
 nav input {
@@ -384,6 +381,60 @@ nav input {
     transform: translateX(-50%) rotate(45deg);
 }
 
+#certificates {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 4vw;
+    height: 50dvw;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.box-certificates {
+    width: 20vw;
+    height: 22dvh;
+    background-color: var(--secondary-color);
+    box-shadow: 100px 100px 100px var(--primary-shadow), -20px -20px 50px var(--secondary-shadow);
+    border-radius: 10px;
+    padding: 1.5vw;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.box-certificates h4 {
+    color: var(--highlight-color);
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.box-certificates h5 {
+    font-weight: 200;
+    margin: 10px 0px;
+}
+
+.box-certificates h6 {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.box-certificates menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box-certificates a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    width: fit-content;
+}
+
+.box-certificates a:hover {
+    color: var(--highlight-color);
+}
+
 [data-scroll-animation] {
     opacity: 0;
     transition: 0.3s;   
@@ -391,6 +442,10 @@ nav input {
 
 [data-scroll-animation='top'] {
     transform: translate3d(0px, -100px, 0px);
+}
+
+[data-scroll-animation='bottom'] {
+    transform: translate3d(0px, 100px, 0px);
 }
 
 [data-scroll-animation='left'] {
