@@ -1,3 +1,9 @@
+
+/**
+ * This method call the 'scroolAnimation()' use a debounce function to set a delay to optimize the monitoring event.
+ * @method 
+*/
+
 export default function ScrollAnimation () {
     const debounce = function (func, wait, immediate) {
         let timeout;
@@ -14,17 +20,21 @@ export default function ScrollAnimation () {
         };
     };
     
-    //SCROLL ANIMATION
+
+
     const dataScroll = document.querySelectorAll('[data-scroll-animation]');
     const animationClass = 'animate';
-    
-    
     const navButtons = {
         home: document.querySelector('#icon-home'),
         about: document.querySelector('#icon-about-me'),
         experience: document.querySelector('#icon-experience')
     };
-    
+
+    /**
+     * Monitoring the WindowTop to set class 'active' in the nav and add animation class in he elements.
+     * @method
+    */
+
     function scrollAnimation() {
         const windowTop = window.scrollY + ((window.innerHeight * 3) / 4);
         
@@ -44,17 +54,16 @@ export default function ScrollAnimation () {
             } else if (windowTop > 2214) {
                 document.querySelector('.active').classList.remove('active');
                 navButtons["experience"].classList.add('active');
-            }    
+            };
         });
     };
     
     scrollAnimation();
     
     if (dataScroll.length) {
-        window.addEventListener('scroll', debounce(
-            function () {
-                scrollAnimation()
-            }
-        ), 200);
+        window.addEventListener('scroll', debounce( function () {
+            console.log(window.scrollY + ((window.innerHeight * 3) / 4));
+            scrollAnimation();
+        }), 200);
     };    
-}
+};

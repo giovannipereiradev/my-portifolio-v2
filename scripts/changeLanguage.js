@@ -1,5 +1,10 @@
 import TypeWriter from "./typeWriter.js";
 
+/**
+ * This method call other two methods, 'getLanguage()' and 'changeHTML()', then monitors changes to the checkbox to select the correct language.
+ * @method
+*/
+
 export default function ChangeLanguage() {
 
     let language = getLanguage();
@@ -23,13 +28,18 @@ export default function ChangeLanguage() {
             //TypeWriter('en');
         };
     });
-
-    
 };
 
+
+/**
+ * This function get the languages preferencies of user, use to set initial language for site.
+ * 
+ * @returns {language} Return the default navigator language
+ * @function
+*/
 export function getLanguage() {
     let language = navigator.language || navigator.userLanguage;
-    const checkBox = document.getElementById('change-language')
+    const checkBox = document.getElementById('change-language');
 
     if (language == 'pt-BR' || language == 'pt-PT' || language == 'pt') {
         language = 'pt';
@@ -41,11 +51,11 @@ export function getLanguage() {
     return language;
 };
 
-async function getJson(language) {
-    const response = await fetch(`../../languages/${language}.json`);
-    return response.json();
-};
-
+/**
+ * This function get the information to .json and replace the HTML
+ * @param {String} language Recive the language
+ * @method 
+*/
 async function changeHTML(language) {
     let json = await getJson(language);
     document.querySelectorAll('[data-language]').forEach(function (element) {
@@ -54,4 +64,15 @@ async function changeHTML(language) {
             element.innerHTML = json[key];
         };
     });
+};
+
+/**
+ * This function recive the language and find the .json for replace the HTML
+ * @param {String} language Recive 'pt' or 'en';
+ * @returns {response} Return the archive .json to make the change to the HTML
+ * @function
+ */
+async function getJson(language) {
+    const response = await fetch(`../../languages/${language}.json`);
+    return response.json();
 };

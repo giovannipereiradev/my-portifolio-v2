@@ -27,23 +27,23 @@ export default function InitialTheme() {
 function toggleTheme() {
     checkBox.addEventListener('change', function () {
         if (checkBox.checked) {
-            body.classList.remove('dark-theme')
-            body.classList.add('light-theme')
-            checkBoxLabel.innerHTML = '<ion-icon name="moon-outline"></ion-icon>'
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
+            checkBoxLabel.innerHTML = '<ion-icon name="moon-outline"></ion-icon>';
             
             checkBoxLabel.classList.add('rotate');
             setTimeout(function () {
                 checkBoxLabel.classList.remove('rotate');
             }, 500);
         } else {
-            body.classList.remove('light-theme')
-            body.classList.add('dark-theme')
-            checkBoxLabel.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>'
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+            checkBoxLabel.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
 
             checkBoxLabel.classList.add('rotate');
             setTimeout(function () {
                 checkBoxLabel.classList.remove('rotate');
             }, 500);
-        }
+        };
     });
-}
+};

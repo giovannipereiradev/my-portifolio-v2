@@ -1,21 +1,21 @@
-import BlurSideBar from './scripts/modules/blurSideBar.js';
+import BlurSideBar from './scripts/blurSideBar.js';
 
 BlurSideBar();
 
 
 
-import InitialTheme from './scripts/modules/initialTheme.js';
+import InitialTheme from './scripts/initialTheme.js';
 
 InitialTheme();
 
 
 
-import ChangeLanguage from './scripts/modules/changeLanguage.js';
+import ChangeLanguage from './scripts/changeLanguage.js';
 
 ChangeLanguage();
 
 
 
-import ScrollAnimation from './scripts/modules/scrollAnimation.js';
+import ScrollAnimation from './scripts/scrollAnimation.js';
 
 ScrollAnimation();

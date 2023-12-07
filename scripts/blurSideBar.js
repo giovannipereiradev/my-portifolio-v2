@@ -1,7 +1,7 @@
 /**
  * This method make the body stay blur while the user hover the sidebar.
  * @method
- */
+*/
 
 export default function BlurSideBar() {
     const body = document.querySelector("body");
@@ -22,4 +22,4 @@ export default function BlurSideBar() {
         nav.classList.remove('hover');
         setTimeout(() => nav.classList.add('hover'), 500);
     });
-}
+};
