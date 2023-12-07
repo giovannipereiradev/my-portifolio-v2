@@ -2,12 +2,6 @@ const body = document.querySelector("body");
 const checkBox = document.getElementById('change-theme');
 const checkBoxLabel = document.getElementById('change-theme-label');
 
-const darkHighlightColor = '#FFA62B';
-const darkTextColor = '#d3dbf5';
-const lightHighlightColor = '#FFA62B';
-const lightTextColor = '#141414';
-
-
 /**
  * This method set the initial theme and call the method 'toggleTheme()' for monitorate status of chekbox.
  * 
@@ -36,10 +30,20 @@ function toggleTheme() {
             body.classList.remove('dark-theme')
             body.classList.add('light-theme')
             checkBoxLabel.innerHTML = '<ion-icon name="moon-outline"></ion-icon>'
+            
+            checkBoxLabel.classList.add('rotate');
+            setTimeout(function () {
+                checkBoxLabel.classList.remove('rotate');
+            }, 500);
         } else {
             body.classList.remove('light-theme')
             body.classList.add('dark-theme')
             checkBoxLabel.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>'
+
+            checkBoxLabel.classList.add('rotate');
+            setTimeout(function () {
+                checkBoxLabel.classList.remove('rotate');
+            }, 500);
         }
     });
 }
