@@ -11,6 +11,16 @@
 </head>
 
 <body>
+
+  <div id="modal">
+    <header>
+      <button id="close-modal">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </header>
+    <img src="" alt="Certificado" id="image-certificate">
+  </div>
+
   <nav class="hover">
     <menu>
       <li>
@@ -88,6 +98,7 @@
       </menu>
     </footer>
   </nav>
+
   <main>
     <div id="home" class="content">
       <h2 data-language="hello">Prazer! Meu nome é</h2>
@@ -250,9 +261,9 @@
         <h5 data-language="certificate-js">Módulo Único - 40 horas</h5>
         <h6>Curso em Vídeo</h6>
         <menu>
-          <a href="./images/certificates/js.png" target="_blank">
+          <button type="button" class="open-modal" data-certificates="js">
             <ion-icon name="ribbon-outline"></ion-icon>
-          </a>
+          </button>
         </menu>
       </div>
       <div class="box-certificates" data-scroll-animation="top">
@@ -260,9 +271,9 @@
         <h5 data-language="certificate-sql">Módulo Único - 40 horas</h5>
         <h6>Curso em Vídeo</h6>
         <menu>
-          <a href="./images/certificates/sql.png" target="_blank">
+          <button type="button" class="open-modal" data-certificates="sql">
             <ion-icon name="ribbon-outline"></ion-icon>
-          </a>
+          </button>
         </menu>
       </div>
       <div class="box-certificates" data-scroll-animation="top">
@@ -270,9 +281,9 @@
         <h5 data-language="certificate-web1">Módulo 1 - 40 horas</h5>
         <h6>Curso em Vídeo</h6>
         <menu>
-          <a href="./images/certificates/web1.png" target="_blank">
+          <button type="button" class="open-modal"  data-certificates="web1">
             <ion-icon name="ribbon-outline"></ion-icon>
-          </a>
+          </button>
         </menu>
       </div>
       <div class="box-certificates" data-scroll-animation="right">
@@ -280,9 +291,9 @@
         <h5 data-language="certificate-web2">Módulo 2 - 40 horas</h5>
         <h6>Curso em Vídeo</h6>
         <menu>
-          <a href="./images/certificates/web2.png" target="_blank">
+          <button type="button" class="open-modal" data-certificates="web2">
             <ion-icon name="ribbon-outline"></ion-icon>
-          </a>
+          </button>
         </menu>
       </div>
       <div class="box-certificates" data-scroll-animation="bottom">
@@ -290,9 +301,9 @@
         <h5 data-language="certificate-web3">Módulo 3 - 40 horas</h5>
         <h6>Curso em Vídeo</h6>
         <menu>
-          <a href="./images/certificates/web3.png" target="_blank">
+          <button type="button" class="open-modal" data-certificates="web3">
             <ion-icon name="ribbon-outline"></ion-icon>
-          </a>
+          </button>
         </menu>
       </div>
     </div>

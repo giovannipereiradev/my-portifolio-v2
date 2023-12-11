@@ -10,6 +10,12 @@ InitialTheme();
 
 
 
+import ModalCertificates from './scripts/modalCertificates.js';
+
+ModalCertificates();
+
+
+
 import ChangeLanguage from './scripts/changeLanguage.js';
 
 ChangeLanguage();
@@ -19,3 +25,9 @@ ChangeLanguage();
 import ScrollAnimation from './scripts/scrollAnimation.js';
 
 ScrollAnimation();
+
+
+
+import TypeWriter from './scripts/typeWriter.js';
+
+//TypeWriter();

@@ -22,31 +22,32 @@ function selectPhrases(element, language) {
 
     if (language == 'pt') phrases = pt; else phrases = en;
 
-    function type() {
-        for (let x of phrases) {
-            
-
-            for (let y = 0; y <= x.length; y++) {
-                setTimeout(() => {
-                    element.innerHTML = x.substring(0, y);
-                }, 100 * y);
-            };
-    
-            setTimeout(() => {
-                for (let z =x.length; z >= 0; z--) {
-                    setTimeout(() => {
-                        element.innerHTML =x.substring(0, z);
-                    }, 100 * (x.length - z));
-                };
-            }, (100 * x.length ) + 3000);
-            
-            setTimeout(() => {
-                type()
-            }, 10 * 1000);
-        };
+    async function type() {
+        await phrases.forEach(element => {
+            console.log(element);
+        });
     };
 
     type();
 
 };
 
+/*
+for (let y = 0; y <= x.length; y++) {
+    setTimeout(() => {
+        element.innerHTML = x.substring(0, y);
+    }, 100 * y);
+};
+
+setTimeout(() => {
+    for (let z =x.length; z >= 0; z--) {
+        setTimeout(() => {
+            element.innerHTML =x.substring(0, z);
+        }, 100 * (x.length - z));
+    };
+}, (100 * x.length ) + 3000);
+
+setTimeout(() => {
+    type()
+}, 10 * 1000);
+*/

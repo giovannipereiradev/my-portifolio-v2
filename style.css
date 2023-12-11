@@ -67,12 +67,9 @@ nav {
     height: 100dvh;
     background-color: var(--secondary-color);
     transition: 0.5s;
-    z-index: 100;
+    z-index: 99;
 }
 
-.hover:hover {
-    width: 250px;
-}
 
 nav a {
     display: flex;
@@ -80,7 +77,6 @@ nav a {
     text-decoration: none;
     color: var(--text-color);
 }
-
 
 nav .title {
     display: flex;
@@ -115,6 +111,8 @@ nav footer .icon {
 
 .icon label {
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .icon label:hover {
@@ -130,9 +128,45 @@ nav input {
     transform: rotate(359deg);
 }
 
+main {
+    transition: 0.5s
+}
+
 #logo {
     font-size: 2rem;
     color: var(--highlight-color);
+}
+
+#modal {
+    display: none;
+    border-radius: 20px;
+    z-index: 100;
+    position: fixed;
+    background-color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: 1vw 2vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modal header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 1dvh;
+}
+
+#modal button {
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#modal img {
+    width: 60vw;
 }
 
 #home {
@@ -423,15 +457,17 @@ nav input {
     display: flex;
     justify-content: flex-end;
 }
+.box-certificates button {
+    background-color: transparent;
 
-.box-certificates a {
     color: var(--text-color);
     text-decoration: none;
     font-size: 1.8rem;
     width: fit-content;
+    cursor: pointer;
 }
 
-.box-certificates a:hover {
+.box-certificates button:hover {
     color: var(--highlight-color);
 }
 
