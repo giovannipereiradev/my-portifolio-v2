@@ -170,7 +170,7 @@ main {
 }
 
 #modal img {
-    width: 60vw;
+    max-width: 60vw;
 }
 
 #home {
@@ -433,7 +433,7 @@ main {
     width: 20vw;
     height: 22dvh;
     background-color: var(--secondary-color);
-    box-shadow: 100px 100px 100px var(--primary-shadow), -20px -20px 50px var(--secondary-shadow);
+    box-shadow: 30px 30px 50px var(--primary-shadow), -20px -20px 50px var(--secondary-shadow);
     border-radius: 10px;
     padding: 1.5vw;
 
