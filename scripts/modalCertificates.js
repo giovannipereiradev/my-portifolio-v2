@@ -3,10 +3,20 @@ const main = document.querySelector('main');
 const body = document.querySelector("body");
 const nav = document.querySelector('nav');
 
+/**
+ * This method just call the 'changeCertificate()'
+ * 
+ * @method 
+*/
 export default function ModalCertificates() {
     changeCertificate();
-}
+};
 
+/**
+ *  This method change the certificate image of modal and call others two methods 'displayModal()' and 'hideModal()'
+ * 
+ * @method 
+*/
 function changeCertificate() {
     const openModal = document.querySelectorAll('.open-modal')
 
@@ -19,15 +29,23 @@ function changeCertificate() {
             hideModal();
         });
     });
-}
+};
 
+/**
+ *This method make a background blur and block the scroll if modal is cativate
+ * @method 
+*/
 function displayModal() {
     modal.style.display = 'block';
     main.style.filter = 'blur(5px)';
     nav.style.filter = 'blur(5px)';
     body.style.overflow = 'hidden';
-}
+};
 
+/**
+ * This method monitoring the button close of modal, to close modal and remov the blur
+ * @method
+ */
 function hideModal() {
     const closeModal = document.querySelector('#close-modal');
 
