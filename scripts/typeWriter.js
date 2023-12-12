@@ -1,53 +1,36 @@
-import { getLanguage } from "./changeLanguage.js";
 
-export default function TypeWriter(language) { 
-    const text = document.querySelector('h3');
-    selectPhrases(text, language);
+export default function TypeWriter() { 
+    const element = document.querySelector('h3');
+    selectPhrases(element);
 };
 
-function selectPhrases(element, language) {
-    const pt = [
-        "Desenvolvedor Web",
-        "Designing UX e UI"
-    ];
+function selectPhrases(element) {
+    const phrases = element.innerHTML.split('|'); 
 
-    const en = [
-        "Web Developer",
-        "Designing UX and UI"
-    ];
+    let currentPhraseIndex = 0;
+    let isDeleting = false;
+    let charIndex = 0;
 
-    let phrases;
+    function type() {
+        const currentText = phrases[currentPhraseIndex];
+        if (isDeleting) {
+            element.innerHTML = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            element.innerHTML = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        };
 
-    if (!language) language = getLanguage();
-
-    if (language == 'pt') phrases = pt; else phrases = en;
-
-    async function type() {
-        await phrases.forEach(element => {
-            console.log(element);
-        });
+        if (!isDeleting && charIndex === currentText.length + 1) {
+            isDeleting = true;
+            setTimeout(() => type(), 2000); 
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+            setTimeout(() => type(), 500);
+        } else {
+            setTimeout(() => type(), 100); 
+        };
     };
-
     type();
-
 };
-
-/*
-for (let y = 0; y <= x.length; y++) {
-    setTimeout(() => {
-        element.innerHTML = x.substring(0, y);
-    }, 100 * y);
-};
-
-setTimeout(() => {
-    for (let z =x.length; z >= 0; z--) {
-        setTimeout(() => {
-            element.innerHTML =x.substring(0, z);
-        }, 100 * (x.length - z));
-    };
-}, (100 * x.length ) + 3000);
-
-setTimeout(() => {
-    type()
-}, 10 * 1000);
-*/

@@ -165,6 +165,10 @@ main {
     align-items: center;
 }
 
+#modal button:hover {
+    color: var(--highlight-color);
+}
+
 #modal img {
     width: 60vw;
 }

@@ -9,6 +9,7 @@
     "contacts": "Contatos",
     
     "hello": "Prazer! Meu nome é",
+    "type-writer": "Desenvolvedor Web|Designer UX e UI",
     "introduction": "Estudante de <strong>Ciência da Computação</strong> na <strong>Unip</strong>, atualmente focado em <strong>Desenvolvimento Web</strong> e <strong>Web Designer</strong>.",
 
     "first-text-about": "Olá, meu nome é <span>Giovanni Pereira</span> sou desenvolvedor desde 2019. Meu primeiro contato com a programação foi através do desenvolvimento de <strong><a href=\"https://discord.js.org/#/\" target=\"_blank\" rel=\"nofollow\">Bots no Discord</a></strong>. Esse primeiro contato me encantou e me fez querer aprender <strong>JavaScript</strong>, depois disso foi implementando cada vez mais tecnologias em minha aplicações assim entregando as melhores soluções para meus clientes, implementando primeiramente um banco de dados local e depois migrando para um online.",
@@ -18,5 +19,12 @@
     "tools": "Ferramentas",
     "responsiveness": "Responsividade",
     "semantics":"Semântica", 
-    "animation":"Animação"
+    "animation":"Animação",
+
+    "certificate-js": "Módulo Único - 40 horas",
+    "certificate-sql": "Módulo Único - 40 horas",
+    "certificate-web1": "Módulo 1 - 40 horas",
+    "certificate-web2": "Módulo 2 - 40 horas",
+    "certificate-web3": "Módulo 3 - 40 horas"
+
 }

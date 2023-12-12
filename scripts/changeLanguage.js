@@ -1,5 +1,3 @@
-import TypeWriter from "./typeWriter.js";
-
 /**
  * This method call other two methods, 'getLanguage()' and 'changeHTML()', then monitors changes to the checkbox to select the correct language.
  * @method
@@ -22,10 +20,8 @@ export default function ChangeLanguage() {
 
         if (checkBox.checked) {
             changeHTML('pt');
-            //TypeWriter('pt');
         } else {
             changeHTML('en');
-            //TypeWriter('en');
         };
     });
 };

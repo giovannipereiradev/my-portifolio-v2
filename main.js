@@ -27,7 +27,10 @@ import ScrollAnimation from './scripts/scrollAnimation.js';
 ScrollAnimation();
 
 
-
+/*
 import TypeWriter from './scripts/typeWriter.js';
 
-//TypeWriter();
+setTimeout(() => {
+    TypeWriter();
+}, 20);
+*/
