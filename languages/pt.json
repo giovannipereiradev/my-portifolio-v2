@@ -25,6 +25,10 @@
     "certificate-sql": "Módulo Único - 40 horas",
     "certificate-web1": "Módulo 1 - 40 horas",
     "certificate-web2": "Módulo 2 - 40 horas",
-    "certificate-web3": "Módulo 3 - 40 horas"
+    "certificate-web3": "Módulo 3 - 40 horas",
+
+    "all-projects":"Todos",
+    "web-projects":"Web",
+    "others-projects":"Outros"
 
 }

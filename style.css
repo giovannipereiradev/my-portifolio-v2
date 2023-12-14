@@ -439,6 +439,7 @@ main {
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .box-certificates h4 {
@@ -473,6 +474,50 @@ main {
 
 .box-certificates button:hover {
     color: var(--highlight-color);
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#projects menu {
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    margin-bottom: 5dvh;
+}
+
+#projects input {
+    display: none;
+}
+
+#projects label {
+    font-size: 1.3rem;
+    transition: .5s;
+}
+
+#projects label:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+
+#display-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box-projects {
+    margin: 2vw;
+    width: 20vw;
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 2vw;
+    border-radius: 15px;
 }
 
 [data-scroll-animation] {
